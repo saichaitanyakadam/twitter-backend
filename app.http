@@ -1,0 +1,34 @@
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567",
+  "name": "Adam Richard",
+  "gender": "male"
+}
+###
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username":"JoeBiden",
+  "password":"biden@123"
+}
+###
+POST  http://localhost:3000/user/tweets
+Content-Type: application/json
+Authorization:bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc1NjkzNjc5fQ.qs5K6eYqUugxMpYBALSAsjzE-s9TI8z3USGlBO8CeWc
+
+{
+   "tweet": "The Mornings..."
+}
+
+###
+DELETE http://localhost:3000/tweets/21/
+Authorization:bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc1NjkzNjc5fQ.qs5K6eYqUugxMpYBALSAsjzE-s9TI8z3USGlBO8CeWc
+
+
+###
+GET http://localhost:3000/user/tweets
+Authorization:bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc1NjkzNjc5fQ.qs5K6eYqUugxMpYBALSAsjzE-s9TI8z3USGlBO8CeWc
